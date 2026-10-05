@@ -400,7 +400,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Formulir Kontak
+              {/* Formulir Kontak */}
               <form onSubmit={handleSubmit} className="lg:col-span-7 bg-[#11171f] p-5 sm:p-8 rounded-2xl border border-white/10 flex flex-col gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Nama Lengkap</label>
@@ -445,7 +445,7 @@ export default function Home() {
                     Kirim Pesan
                   </GradientText>
                 </button>
-              </form> */}
+              </form>
 
             </div>
           </AnimatedContent>
