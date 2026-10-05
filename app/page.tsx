@@ -2,7 +2,6 @@
 
 import type { FormEvent } from "react";
 import Image from "next/image";
-import Lanyard from "./components/Lanyard";
 import RotatingText from "./components/RotatingText";
 import BlurText from "./components/BlurText";
 import AnimatedContent from "./components/AnimatedContent";
@@ -88,9 +87,9 @@ export default function Home() {
             >
               <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                 <h1 className="text-xl md:text-2xl font-medium text-gray-300 tracking-wide">
-                  Halo, saya siap bergabung sebagai
+                  Halo, saya siap bergabung sebagai Web Developer
                 </h1>
-                <RotatingText
+                {/* <RotatingText
                   texts={["Pengembang Web", "Pengembang Sisi Server", "Analis SEO"]}
                   mainClassName="px-4 bg-[#A7D129] text-[#19222D] overflow-hidden py-1 rounded-md text-xl md:text-2xl font-bold inline-flex shadow-[0_0_15px_rgba(167,209,41,0.4)] transition-all"
                   staggerFrom="last"
@@ -101,7 +100,7 @@ export default function Home() {
                   splitLevelClassName="overflow-hidden pb-1"
                   transition={{ type: "spring", damping: 30, stiffness: 400 }}
                   rotationInterval={3000}
-                />
+                /> */}
               </div>
             </AnimatedContent>
 
@@ -147,10 +146,17 @@ export default function Home() {
             </div>
           </div>
 
-          {/* RIGHT SECTION - 3D MODEL */}
-          <div className="col-span-1 lg:col-span-5 h-[320px] sm:h-[400px] lg:h-[600px] w-full flex justify-center items-center order-1 lg:order-2 relative cursor-grab active:cursor-grabbing">
-            <div className="w-full h-full relative">
-              <Lanyard position={[0, 0, 15]} gravity={[0, -30, 0]} />
+          {/* FOTO PROFIL */}
+          <div className="col-span-1 lg:col-span-5 w-full flex justify-center items-center order-1 lg:order-2 relative">
+            <div className="relative aspect-[4/5] w-full max-w-[360px] sm:max-w-[400px] lg:max-w-[460px]">
+              <Image
+                src="/assets/images/depra1.png"
+                alt="Potret Pande Gede Pratama Artha"
+                fill
+                priority
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 60vw, 40vw"
+                className="object-contain object-bottom"
+              />
             </div>
           </div>
         </div>
@@ -394,7 +400,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Formulir Kontak */}
+              {/* Formulir Kontak
               <form onSubmit={handleSubmit} className="lg:col-span-7 bg-[#11171f] p-5 sm:p-8 rounded-2xl border border-white/10 flex flex-col gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Nama Lengkap</label>
@@ -439,7 +445,7 @@ export default function Home() {
                     Kirim Pesan
                   </GradientText>
                 </button>
-              </form>
+              </form> */}
 
             </div>
           </AnimatedContent>
